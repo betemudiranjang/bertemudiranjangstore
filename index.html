@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bertemu di Ranjang</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#ececec;
+}
+
+.page{
+    width:100%;
+    max-width:390px;
+    margin:auto;
+    background:#fff;
+    min-height:100vh;
+    box-shadow:0 0 20px rgba(0,0,0,.08);
+}
+
+/* HEADER */
+
+.hero{
+    height:160px;
+    overflow:hidden;
+    background:#222;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.avatar{
+    width:82px;
+    height:82px;
+    border-radius:50%;
+    margin:-41px auto 15px;
+    border:4px solid #fff;
+    overflow:hidden;
+    background:#111;
+}
+
+.avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* PROFILE */
+
+.profile{
+    text-align:center;
+    padding:0 20px 15px;
+}
+
+.profile h1{
+    font-size:22px;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+.user{
+    color:#888;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.desc{
+    color:#666;
+    font-size:13px;
+    line-height:1.7;
+}
+
+/* SECTION */
+
+.sec{
+    padding:25px 20px 15px;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+/* CARD */
+
+.card{
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
+}
+
+/* BUNDLE */
+
+.bundle{
+    margin:0 20px;
+    padding:14px;
+    display:flex;
+    gap:14px;
+}
+
+.thumb{
+    width:130px;
+    height:180px;
+    border-radius:10px;
+    overflow:hidden;
+    flex-shrink:0;
+}
+
+.thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.info{
+    flex:1;
+}
+
+.info h3{
+    font-size:16px;
+    margin-bottom:10px;
+}
+
+.info p{
+    font-size:13px;
+    color:#666;
+    line-height:1.5;
+    margin-bottom:10px;
+}
+
+.info small{
+    display:block;
+    color:#888;
+    margin-bottom:10px;
+}
+
+.price span{
+    color:#ff5555;
+    text-decoration:line-through;
+    display:block;
+    font-size:14px;
+}
+
+.price b{
+    color:#17b85a;
+    display:block;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+button{
+    background:#16c35d;
+    color:#fff;
+    border:none;
+    padding:10px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+/* GRID */
+
+.grid{
+    padding:0 20px 25px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+.product{
+    position:relative;
+    overflow:hidden;
+}
+
+.product:hover{
+    transform:translateY(-3px);
+    transition:.25s;
+}
+
+.pimg{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.badge{
+    position:absolute;
+    top:8px;
+    right:8px;
+    background:#fff;
+    padding:4px 8px;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:700;
+}
+
+.content{
+    padding:12px;
+}
+
+.content h4{
+    font-size:15px;
+    line-height:1.4;
+    min-height:42px;
+    margin-bottom:8px;
+}
+
+.content p{
+    font-size:12px;
+    color:#666;
+    line-height:1.5;
+    min-height:54px;
+    margin-bottom:10px;
+}
+
+.green{
+    display:block;
+    color:#16b95c;
+    font-size:18px;
+    margin-bottom:12px;
+}
+
+.act{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.act button{
+    font-size:11px;
+    padding:8px 10px;
+}
+
+footer{
+    padding:35px 20px;
+    text-align:center;
+    border-top:1px solid #eee;
+    color:#777;
+    font-size:12px;
+    line-height:2;
+}
+
+/* MOBILE */
+
+@media(max-width:420px){
+
+.bundle{
+    flex-direction:column;
+}
+
+.thumb{
+    width:100%;
+    height:220px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="hero">
+<img src="sampulcheckout.png">
+</header>
+
+<div class="avatar">
+<img src="logobertemu.png">
+</div>
+
+<section class="profile">
+<h1>Bertemu di Ranjang</h1>
+<p class="user">@bertemudiranjang</p>
+<p class="desc">
+Panduan dan edukasi intim untuk pasangan membangun hubungan yang lebih erat, sehat, dan menyenangkan.
+</p>
+</section>
+
+<h2 class="sec">BUNDLE</h2>
+
+<div class="bundle card">
+
+<div class="thumb">
+<img src="coverbundlingnew.png">
+</div>
+
+<div class="info">
+
+<h3>Bundle Premium Eksklusif</h3>
+
+<p>
+Dari Biasa Menjadi Luar Biasa - Pengakuan 11 Tahun Menjadi GIGOLO.
+</p>
+
+<small>
+5 Produk • Hemat Rp 938.500
+</small>
+
+<div class="price">
+<span>Rp 1.306.500</span>
+<b>Rp 368.000</b>
+</div>
+
+<a href="https://richcreatornusantara187.form.id/bundlepremium"
+   class="btn"
+   target="_blank">
+   ⚡ Beli sekarang
+</a>
+
+</div>
+
+</div>
+
+<h2 class="sec">PRODUK</h2>
+
+<div class="grid">
+
+<div class="product card">
+<img src="cover7.png" class="pimg">
+<div class="badge">Ebook</div>
+<div class="content">
+<h4>Mereka Tidak Datang Untuk Cinta</h4>
+<p>Pengakuan 11 Tahun Menjadi Gigolo</p>
+<b class="green">Rp 289.000</b>
+<div class="act">
+<span>🛒</span>
+<a href="https://richcreatornusantara187.form.id/gigolo"
+   class="btn-mini"
+   target="_blank">
+   Beli
+</a>
+</div>
+</div>
+</div>
+
+<div class="product card">
+<img src="cover5.png" class="pimg">
+<div class="badge">Ebook</div>
+<div class="content">
+<h4>Posisi Rahasia Dibalik Squirting</h4>
+<p>Panduan posisi terbaik.</p>
+<b class="green">Rp 69.000</b>
+<div class="act">
+<span>🛒</span>
+<a href="https://richcreatornusantara187.form.id/realpic"
+   class="btn-mini"
+   target="_blank">
+   Beli
+</a>
+</div>
+</div>
+</div>
+
+<div class="product card">
+<img src="cover1.png" class="pimg">
+<div class="badge">Ebook</div>
+<div class="content">
+<h4>Hamil? Malah lebih nikmat.</h4>
+<p>Panduan untuk calon ayah dan ibu.</p>
+<b class="green">Rp 99.000</b>
+<div class="act">
+<span>🛒</span>
+<a href="https://richcreatornusantara187.form.id/hamil"
+   class="btn-mini"
+   target="_blank">
+   Beli
+</a>
+</div>
+</div>
+</div>
+
+<div class="product card">
+<img src="cover2.png" class="pimg">
+<div class="badge">Ebook</div>
+<div class="content">
+<h4>Kitab Rahasia Klitoris</h4>
+<p>Panduan memahami sentuhan.</p>
+<b class="green">Rp 129.000</b>
+<div class="act">
+<span>🛒</span>
+<a href="https://richcreatornusantara187.form.id/kitabrahasiaklitoris"
+   class="btn-mini"
+   target="_blank">
+   Beli
+</a>
+</div>
+</div>
+</div>
+
+<div class="product card">
+<img src="cover3.png" class="pimg">
+<div class="badge">Ebook</div>
+<div class="content">
+<h4>Rahasia Jago Squirting</h4>
+<p>Pelajari teknik stimulasi.</p>
+<b class="green">Rp 99.000</b>
+<div class="act">
+<span>🛒</span>
+<a href="https://richcreatornusantara187.form.id/rahasiajagosquirting"
+   class="btn-mini"
+   target="_blank">
+   Beli
+</a>
+</div>
+</div>
+</div>
+
+<div class="product card">
+<img src="cover4.png" class="pimg">
+<div class="badge">Ebook</div>
+<div class="content">
+<h4>The Queen's Influence</h4>
+<p>Komunikasi dan daya tarik.</p>
+<b class="green">Rp 99.000</b>
+<div class="act">
+<span>🛒</span>
+<a href="https://richcreatornusantara187.form.id/queen"
+   class="btn-mini"
+   target="_blank">
+   Beli
+</a>
+</div>
+</div>
+</div>
+
+<div class="product card">
+<img src="cover8.png" class="pimg">
+<div class="badge">Ebook</div>
+<div class="content">
+<h4>Resep Ramuan Herbal Vitalitas Pria</h4>
+<p>Ramuan tradisional terbaik.</p>
+<b class="green">Rp 24.000</b>
+<div class="act">
+<span>🛒</span>
+<a href="https://richcreatornusantara187.form.id/vitalitas"
+   class="btn-mini"
+   target="_blank">
+   Beli
+</a>
+</div>
+</div>
+</div>
+
+<div class="product card">
+<img src="cover10.png" class="pimg">
+<div class="badge">Ebook</div>
+<div class="content">
+<h4>Tahan Lama & Lebih Besar</h4>
+<p>Panduan pengembangan diri.</p>
+<b class="green">Rp 48.500</b>
+<div class="act">
+<span>🛒</span>
+<a href="https://richcreatornusantara187.form.id/tanpaobat"
+   class="btn-mini"
+   target="_blank">
+   Beli
+</a>
+</div>
+</div>
+</div>
+
+<div class="product card">
+<img src="cover6.png" class="pimg">
+<div class="badge">Ebook</div>
+<div class="content">
+<h4>200 Intim Position</h4>
+<p>Real pic tanpa sensor.</p>
+<b class="green">Rp 250.000</b>
+<div class="act">
+<span>🛒</span>
+<a href="https://richcreatornusantara187.form.id/position"
+   class="btn-mini"
+   target="_blank">
+   Beli
+</a>
+</div>
+</div>
+</div>
+
+<div class="product card">
+<img src="cover9.png" class="pimg">
+<div class="badge">Ebook</div>
+<div class="content">
+<h4>26 Video Real Tanpa Sensor</h4>
+<p>Orgasmic Massages Techniques.</p>
+<b class="green">Rp 269.000</b>
+<div class="act">
+<span>🛒</span>
+<a href="https://richcreatornusantara187.form.id/teknikpijat"
+   class="btn-mini"
+   target="_blank">
+   Beli
+</a>
+</div>
+</div>
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Bertemu di Ranjang. Hak cipta dilindungi.</p>
+
+<br>
+
+<p>
+Kebijakan Privasi &nbsp;
+Syarat & Ketentuan &nbsp;
+Kebijakan Pengembalian
+</p>
+
+<br>
+
+<p>POWERED BY</p>
+
+<b>Rich Creator Nusantara</b>
+
+</footer>
+
+</div>
+
+</body>
+</html>
